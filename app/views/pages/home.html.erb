@@ -9,11 +9,11 @@
             <h2 class="text-center">Your profile</h2>
             <% if current_user.profile %>
             <h5 class="text-center">Get access to your own profile and edit your already existing information</h5>
-                <%= link_to "Edit your profile", "#", class: 'btn btn-default btn-lg btn-block' %>
+                <%= link_to "Edit your profile",  edit_user_profile_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
                 <%= link_to "View your profile", user_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
             <% else %>
                 <h5 class="text-center">Input your contact information for other users to get in touch</h5>
-                <%= link_to "Create your profile!", new_user_profile_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
+                <%= link_to "Create your profile", new_user_profile_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
             <% end %>
         </div>
     </div>
